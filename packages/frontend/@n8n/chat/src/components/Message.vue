@@ -77,8 +77,9 @@ const markdownOptions = {
 	},
 };
 
-const messageComponents = { ...(options?.messageComponents ?? {}) };
+const messageComponents: Record<string, any> = { ...(options?.messageComponents ?? {}) };
 
+	
 defineExpose({ scrollToView });
 
 const readFileAsDataURL = async (file: File): Promise<string> =>
